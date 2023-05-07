@@ -1,5 +1,5 @@
 import React from 'react'
-import GenerateContent from './GenerateContent'
+import GenerateContent from './ContentGenerator'
 
 const Poster = () => {
   return (
