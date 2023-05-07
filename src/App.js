@@ -1,4 +1,3 @@
-import { Typography } from '@mui/material';
 import './App.css';
 import Poster from './components/Poster';
 
@@ -6,7 +5,7 @@ import Poster from './components/Poster';
 function App() {
   return (
     <div className="App">
-      <Typography>Poster Generator</Typography>
+      <h1 className='mb-3 text-center'>AI Poster Generator</h1>
       <Poster/>
     </div>
   );

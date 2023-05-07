@@ -16,6 +16,7 @@ async function generateBusinessName(inputText) {
     })
   });
   const data = await response.json();
+  console.log('Response data:', data);
   const businessName = data.choices[0].text.trim();
 
   return businessName;

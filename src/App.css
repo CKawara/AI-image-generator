@@ -1,38 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+
 .App {
-  text-align: center;
+    background-color: #1E1E1E;
+    height: 100vh;
+    color: #ffffff;
+    font-family: 'Bubblegum Sans', cursive;
+    padding: 7%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1{
+    font-size: 60px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.submit{
+    background: rgb(67,9,121);
+    background: linear-gradient(141deg, rgba(67,9,121,1) 41%, rgba(0,78,255,1) 100%);
+    font-size: x-large;
 }
