@@ -20,11 +20,11 @@ async function generateBusinessName(inputText) {
     if (!response.ok) {
       throw new Error(`Error generating business name: ${data.error.message}`);
     }
-    const businessName = data.choices[0].text.trim();
-    console.log(businessName)
+    const businessName = data.choices[0].text.trim().split('\n')[0];
     return businessName;
-  } catch (error) {
-    console.error(error);
+  } 
+  catch (error) {
+    alert(error);
     return null;
   }
 }
@@ -49,11 +49,11 @@ async function generateTagline(inputText, businessName) {
     if (!response.ok) {
       throw new Error(`Error generating tagline: ${data.error.message}`);
     }
-    const tagline = data.choices[0].text.trim();
-    console.log(tagline);
+    const tagline = data.choices[0].text.trim().split('\n')[0];
     return tagline;
-  } catch (error) {
-    console.error(error);
+  } 
+  catch (error) {
+    alert(error);
     return null;
   }
 }
@@ -80,15 +80,16 @@ async function generateImage(inputText) {
     }
     const imageURL = data.data[0].url;
     return imageURL;
-  } catch (error) {
-    console.error(error);
+  } 
+  catch (error) {
+    alert(error);
     return null;
   }
 }
 
 async function generateContent(inputText) {
   try {
-    // Generate business name and tagline using GPT-3
+    // Call function to Generate business name and tagline
     const businessName = await generateBusinessName(inputText);
     if (!businessName) {
       throw new Error('Error generating business name');
@@ -98,7 +99,7 @@ async function generateContent(inputText) {
       throw new Error('Error generating tagline');
     }
 
-    // Generate image using DALL-E
+    // Call function to Generate image
     const imageURL = await generateImage(inputText);
     if (!imageURL) {
       throw new Error('Error generating image');
@@ -111,7 +112,7 @@ async function generateContent(inputText) {
       imageURL: imageURL
     };
   } catch (error) {
-    console.error(error);
+    alert(error);
     return null;
   }
 }
