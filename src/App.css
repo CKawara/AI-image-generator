@@ -2,7 +2,7 @@
 
 .App {
     background-color: #1E1E1E;
-    height: 100vh;
+    min-height: 100vh;
     color: #ffffff;
     font-family: 'Bubblegum Sans', cursive;
     padding: 7%;

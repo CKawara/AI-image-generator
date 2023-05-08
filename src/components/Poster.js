@@ -1,11 +1,19 @@
 import React from 'react'
-import GenerateContent from './ContentGenerator'
+import {Card } from 'react-bootstrap';
 
-const Poster = () => {
+const Poster = ({generatedContent}) => {
   return (
     <div>
-        <GenerateContent/>
-    </div>
+    <Card className=" shadow text-dark" style={{ width: '18 rem' }}>
+      <Card.Img variant="top" src={generatedContent.imageURL} />
+      <Card.Body>
+        <Card.Title className="fs-2">{generatedContent.title}</Card.Title>
+        <Card.Text>
+          {generatedContent.content}
+        </Card.Text>
+      </Card.Body>
+    </Card>
+  </div>
   )
 }
 
