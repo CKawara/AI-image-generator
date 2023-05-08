@@ -22,6 +22,7 @@ const ContentGenerator = () => {
         <Form.Group className="mb-3 " controlId="inputText">
           <Form.Label className='fs-3'>Input Text:</Form.Label>
           <Form.Control 
+            required
             size="lg"
             type="text" 
             placeholder="Enter words to generate poster" 
@@ -44,7 +45,10 @@ const ContentGenerator = () => {
         </Form.Group>
       </Form>
       {generatedContent && (
-        <Poster generatedContent={generatedContent}/>
+        <div>
+          <p>Click generate if not satisfied with result</p>
+          <Poster generatedContent={generatedContent}/>
+        </div>
       )}
     </div>
   )
